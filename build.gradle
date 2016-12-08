@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.simonharrer'
-version '1.4.0'
+version '1.4.0.1'
 
 pluginBundle {
     website = 'https://github.com/simonharrer/gradle-modernizer-plugin'
