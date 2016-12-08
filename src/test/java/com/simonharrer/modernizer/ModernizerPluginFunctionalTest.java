@@ -19,6 +19,24 @@ public class ModernizerPluginFunctionalTest {
     }
 
     @Test
+    public void testOneIssueInTestIgnored() throws IOException {
+        BuildResult result = GradleRunner.create()
+                .withProjectDir(Paths.get("examples/oneIssueInTestIgnored").toFile())
+                .withPluginClasspath()
+                .withArguments("modernizer")
+                .build();
+    }
+
+    @Test
+    public void testOneIssueInTest() throws IOException {
+        BuildResult result = GradleRunner.create()
+                .withProjectDir(Paths.get("examples/oneIssueInTest").toFile())
+                .withPluginClasspath()
+                .withArguments("modernizer")
+                .buildAndFail();
+    }
+
+    @Test
     public void testOneIssue() throws IOException {
         BuildResult result = GradleRunner.create()
                 .withProjectDir(Paths.get("examples/oneIssue").toFile())

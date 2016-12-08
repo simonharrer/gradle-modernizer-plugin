@@ -1,0 +1,8 @@
+plugins {
+    id 'java'
+    id 'com.simonharrer.modernizer'
+}
+
+modernizer {
+    includeTestClasses = false
+}

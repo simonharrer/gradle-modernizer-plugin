@@ -6,3 +6,9 @@
 /examples/noIssues/.gradle/
 /examples/oneIssue/build/
 /examples/oneIssue/.gradle/
+examples/oneIssueInTest/.gradle/
+examples/oneIssueInTest/build/
+examples/oneIssueInTestIgnored/.gradle/
+examples/oneIssueInTestIgnored/build/
+src/main/resources/
+src/test/resources/
