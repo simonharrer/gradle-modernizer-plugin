@@ -24,7 +24,7 @@ gradlePlugin {
     plugins {
         simplePlugin {
             id = "com.simonharrer.modernizer"
-            implementationClass = "org.simonharrer.ModernizerPlugin"
+            implementationClass = "com.simonharrer.modernizer.ModernizerPlugin"
         }
     }
 }
@@ -40,4 +40,6 @@ repositories {
 
 dependencies {
     compile 'org.gaul:modernizer-maven-plugin:1.4.0'
+
+    testCompile 'junit:junit:4.12'
 }

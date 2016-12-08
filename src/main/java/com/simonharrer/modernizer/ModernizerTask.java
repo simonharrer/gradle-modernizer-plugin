@@ -1,6 +1,7 @@
-package org.simonharrer;
+package com.simonharrer.modernizer;
 
 import java.io.File;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -32,6 +33,9 @@ public class ModernizerTask extends DefaultTask {
     private void executeForSourceSet(ModernizerPluginExtension extension, SourceSet mainSourceSet)
             throws Exception {
         final Path classesDir = mainSourceSet.getOutput().getClassesDir().toPath();
+        if(!Files.exists(classesDir)) {
+            return;
+        }
         final List<Path> sourceDirs = mainSourceSet.getJava().getSrcDirs().stream().map(File::toPath).collect(Collectors.toList());
         ModernizerWrapper.execute(extension, classesDir, sourceDirs, getLogger());
     }

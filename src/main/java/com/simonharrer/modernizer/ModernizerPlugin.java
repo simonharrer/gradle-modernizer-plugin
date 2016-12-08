@@ -1,4 +1,4 @@
-package org.simonharrer;
+package com.simonharrer.modernizer;
 
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;

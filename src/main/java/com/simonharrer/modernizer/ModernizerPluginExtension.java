@@ -1,4 +1,4 @@
-package org.simonharrer;
+package com.simonharrer.modernizer;
 
 import java.util.HashSet;
 import java.util.Set;

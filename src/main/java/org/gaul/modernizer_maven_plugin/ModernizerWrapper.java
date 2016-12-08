@@ -14,8 +14,8 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import com.simonharrer.modernizer.ModernizerPluginExtension;
 import org.gradle.api.logging.Logger;
-import org.simonharrer.ModernizerPluginExtension;
 
 /**
  * This class must be in this specific package to access the package private class Modernizer from the maven-modernizer-plugin
