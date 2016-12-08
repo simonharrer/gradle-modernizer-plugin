@@ -1,4 +1,4 @@
-# gradle-modernizer-plugin
+# gradle-modernizer-plugin [![Build Status](https://travis-ci.org/simonharrer/gradle-modernizer-plugin.svg?branch=master)](https://travis-ci.org/simonharrer/gradle-modernizer-plugin)
 
 This gradle plugin is a thin wrapper around the [modernizer-maven-plugin](https://github.com/andrewgaul/modernizer-maven-plugin).
 
