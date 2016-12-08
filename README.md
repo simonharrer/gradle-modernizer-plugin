@@ -2,7 +2,8 @@
 
 This gradle plugin is a thin wrapper around the [modernizer-maven-plugin](https://github.com/andrewgaul/modernizer-maven-plugin).
 
-Its version corresponds to that of the modernizer-maven-plugin.
+The version of this gradle plugin uses the format "${modernizer-maven-plugin.version}-${internalVersion}.
+For instance, "1.4.0-1" refers to the first version using modernizer-maven-plugin 1.4.0.
 
 ## Usage
 
@@ -10,7 +11,7 @@ Add to your gradle script
 
 ```groovy
 plugins {
-   id "com.simonharrer.modernizer" version "1.4.0"
+   id "com.simonharrer.modernizer" version "1.4.0-1"
 }
 ```
 
@@ -24,7 +25,7 @@ $ gradle modernizer
 
 The default configuration that is automatically applied:
 
-```
+```groovy
 modernizer {
    includeTestClasses = true
    failOnViolations = true
