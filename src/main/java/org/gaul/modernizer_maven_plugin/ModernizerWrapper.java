@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -66,6 +67,7 @@ public class ModernizerWrapper {
                 extension.getJavaVersion(),
                 getConfiguredViolations(extension.getViolationsFile()),
                 getExclusions(extension.getExclusionsFile()),
+                Collections.emptyList(),
                 extension.getIgnorePackages()
         );
     }
