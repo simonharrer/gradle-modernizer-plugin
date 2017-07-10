@@ -7,11 +7,15 @@ import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -67,7 +71,7 @@ public class ModernizerWrapper {
                 extension.getJavaVersion(),
                 getConfiguredViolations(extension.getViolationsFile()),
                 getExclusions(extension.getExclusionsFile()),
-                Collections.emptyList(),
+                getExclusionPatterns(extension.getExclusionPatterns()),
                 extension.getIgnorePackages()
         );
     }
@@ -143,6 +147,14 @@ public class ModernizerWrapper {
             }
         }
         return violations;
+    }
+
+    private static Collection<Pattern> getExclusionPatterns(Collection<String> exclusionPatterns) throws PatternSyntaxException {
+        final List<Pattern> patterns = new ArrayList<>(exclusionPatterns.size());
+        for (final String exclusionPattern : exclusionPatterns) {
+            patterns.add(Pattern.compile(exclusionPattern));
+        }
+        return patterns;
     }
 
 }
