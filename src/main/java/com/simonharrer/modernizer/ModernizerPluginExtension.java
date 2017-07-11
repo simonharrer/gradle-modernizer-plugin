@@ -10,6 +10,7 @@ public class ModernizerPluginExtension {
     private boolean includeTestClasses = true;
     private boolean failOnViolations = true;
     private Set<String> exclusions = new HashSet<>();
+    private Set<String> exclusionPatterns = new HashSet<>();
     private Set<String> ignorePackages = new HashSet<>();
     private String javaVersion = "";
 
@@ -59,6 +60,14 @@ public class ModernizerPluginExtension {
 
     public void setExclusions(Set<String> exclusions) {
         this.exclusions = exclusions;
+    }
+
+    public Set<String> getExclusionPatterns() {
+        return exclusionPatterns;
+    }
+
+    public void setExclusionPatterns(Set<String> exclusionPatterns) {
+        this.exclusionPatterns = exclusionPatterns;
     }
 
     public Set<String> getIgnorePackages() {

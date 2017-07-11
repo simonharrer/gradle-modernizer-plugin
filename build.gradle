@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.simonharrer'
-version '1.4.0-1'
+version '1.5.0-1'
 
 buildScan {
     licenseAgreementUrl = 'https://gradle.com/terms-of-service'
@@ -45,7 +45,7 @@ repositories {
 }
 
 dependencies {
-    compile 'org.gaul:modernizer-maven-plugin:1.4.0'
+    compile 'org.gaul:modernizer-maven-plugin:1.5.0'
 
     testCompile 'junit:junit:4.12'
 }
