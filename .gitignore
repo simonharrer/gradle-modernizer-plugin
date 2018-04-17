@@ -12,3 +12,4 @@ examples/oneIssueInTestIgnored/.gradle/
 examples/oneIssueInTestIgnored/build/
 src/main/resources/
 src/test/resources/
+*.iml

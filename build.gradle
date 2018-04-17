@@ -1,11 +1,23 @@
 plugins {
-    id 'com.gradle.build-scan' version '1.8'
+    id 'com.gradle.build-scan' version '1.13.1'
     id "java-gradle-plugin"
-    id "com.gradle.plugin-publish" version "0.9.7"
+    id "com.gradle.plugin-publish" version "0.9.10"
+    id "net.ltgt.errorprone" version "0.0.13"
+    id 'com.github.sherter.google-java-format' version '0.6'
 }
 
+apply plugin: "java"
+
 group 'com.simonharrer'
-version '1.5.0-1'
+version '1.6.0-1'
+
+googleJavaFormat {
+    toolVersion = '1.5'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.6'
+}
 
 buildScan {
     licenseAgreementUrl = 'https://gradle.com/terms-of-service'
@@ -45,7 +57,7 @@ repositories {
 }
 
 dependencies {
-    compile 'org.gaul:modernizer-maven-plugin:1.5.0'
+    compile 'org.gaul:modernizer-maven-plugin:1.6.0'
 
     testCompile 'junit:junit:4.12'
 }
