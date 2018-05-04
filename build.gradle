@@ -31,7 +31,7 @@ pluginBundle {
     tags = ['Verification', 'legacy APIs', 'Java']
 
     plugins {
-        greetingsPlugin {
+        modernizerPlugin {
             id = 'com.simonharrer.modernizer'
             displayName = 'Gradle Modernizer plugin'
         }
@@ -40,7 +40,7 @@ pluginBundle {
 
 gradlePlugin {
     plugins {
-        simplePlugin {
+        modernizerPlugin {
             id = "com.simonharrer.modernizer"
             implementationClass = "com.simonharrer.modernizer.ModernizerPlugin"
         }
