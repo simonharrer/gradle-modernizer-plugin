@@ -57,7 +57,7 @@ repositories {
 }
 
 dependencies {
-    compile 'org.gaul:modernizer-maven-plugin:1.6.0'
+    compile 'org.gaul:modernizer-maven-plugin:1.8.0'
 
     testCompile 'junit:junit:4.12'
 }
