@@ -27,7 +27,7 @@ import org.gradle.api.logging.Logger;
  */
 public class ModernizerWrapper {
 
-  public static final String MODERNIZER_VIOLATIONS_FILE = "modernizer.violationsFile";
+  private static final String MODERNIZER_VIOLATIONS_FILE = "modernizer.violationsFile";
 
   public static void execute(
       ModernizerPluginExtension extension, Path classesDir, List<Path> sourceDirs, Logger logger)
@@ -43,9 +43,7 @@ public class ModernizerWrapper {
               .flatMap(
                   p -> {
                     try (InputStream is = Files.newInputStream(p)) {
-                      return modernizer
-                          .check(is)
-                          .stream()
+                      return modernizer.check(is).stream()
                           .peek(
                               v -> {
                                 final Path sourcePath = sourceFileName(p, classesDir, sourceDirs);

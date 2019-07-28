@@ -5,7 +5,7 @@ import org.gradle.api.Project;
 
 public class ModernizerPlugin implements Plugin<Project> {
 
-  public static final String MODERNIZER = "modernizer";
+  private static final String MODERNIZER = "modernizer";
 
   @Override
   public void apply(Project project) {
