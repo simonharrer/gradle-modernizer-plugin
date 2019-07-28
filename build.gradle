@@ -8,7 +8,7 @@ plugins {
 apply plugin: "java"
 
 group 'com.simonharrer'
-version '1.6.0-2'
+version '1.8.0-1'
 
 googleJavaFormat {
     toolVersion = '1.7'
@@ -47,7 +47,7 @@ repositories {
 }
 
 dependencies {
-    compile 'org.gaul:modernizer-maven-plugin:1.6.0'
+    compile 'org.gaul:modernizer-maven-plugin:1.8.0'
 
     testCompile 'junit:junit:4.12'
 }
