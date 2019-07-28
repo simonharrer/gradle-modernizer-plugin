@@ -33,20 +33,13 @@ public class ModernizerTask extends DefaultTask {
   private void executeForSourceSet(ModernizerPluginExtension extension, SourceSet mainSourceSet)
       throws Exception {
     final List<Path> classesDirs =
-        mainSourceSet
-            .getOutput()
-            .getClassesDirs()
-            .getFiles()
-            .stream()
+        mainSourceSet.getOutput().getClassesDirs().getFiles().stream()
             .map(File::toPath)
             .filter(Files::exists)
             .collect(Collectors.toList());
     for (final Path classesDir : classesDirs) {
       final List<Path> sourceDirs =
-          mainSourceSet
-              .getJava()
-              .getSrcDirs()
-              .stream()
+          mainSourceSet.getJava().getSrcDirs().stream()
               .map(File::toPath)
               .collect(Collectors.toList());
       ModernizerWrapper.execute(extension, classesDir, sourceDirs, getLogger());

@@ -9,10 +9,10 @@ plugins {
 apply plugin: "java"
 
 group 'com.simonharrer'
-version '1.6.0-1'
+version '1.6.0-2'
 
 googleJavaFormat {
-    toolVersion = '1.5'
+    toolVersion = '1.7'
 }
 
 task wrapper(type: Wrapper) {
