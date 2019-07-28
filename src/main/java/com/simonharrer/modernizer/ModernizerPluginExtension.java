@@ -12,6 +12,8 @@ public class ModernizerPluginExtension {
   private Set<String> exclusions = new HashSet<>();
   private Set<String> exclusionPatterns = new HashSet<>();
   private Set<String> ignorePackages = new HashSet<>();
+  private Set<String> ignoreClassNames = new HashSet<>();
+  private Set<String> ignoreClassNamePatterns = new HashSet<>();
   private String javaVersion = "";
 
   public String getJavaVersion() {
@@ -76,5 +78,21 @@ public class ModernizerPluginExtension {
 
   public void setIgnorePackages(Set<String> ignorePackages) {
     this.ignorePackages = ignorePackages;
+  }
+
+  public Set<String> getIgnoreClassNames() {
+    return ignoreClassNames;
+  }
+
+  public void setIgnoreClassNames(Set<String> ignoreClassNames) {
+    this.ignoreClassNames = ignoreClassNames;
+  }
+
+  public Set<String> getIgnoreClassNamePatterns() {
+    return ignoreClassNamePatterns;
+  }
+
+  public void setIgnoreClassNamePatterns(Set<String> ignoreClassNamePatterns) {
+    this.ignoreClassNamePatterns = ignoreClassNamePatterns;
   }
 }

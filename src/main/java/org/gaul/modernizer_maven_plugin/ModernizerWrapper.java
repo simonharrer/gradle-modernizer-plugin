@@ -72,8 +72,10 @@ public class ModernizerWrapper {
         extension.getJavaVersion(),
         getConfiguredViolations(extension.getViolationsFile()),
         getExclusions(extension.getExclusionsFile()),
-        getExclusionPatterns(extension.getExclusionPatterns()),
-        extension.getIgnorePackages());
+        compilePatterns(extension.getExclusionPatterns()),
+        extension.getIgnorePackages(),
+        extension.getIgnoreClassNames(),
+        compilePatterns(extension.getIgnoreClassNamePatterns()));
   }
 
   private static Set<String> getExclusions(String exclusionsFile) throws Exception {
@@ -165,12 +167,12 @@ public class ModernizerWrapper {
     return violations;
   }
 
-  private static Collection<Pattern> getExclusionPatterns(Collection<String> exclusionPatterns)
+  private static Collection<Pattern> compilePatterns(Collection<String> patterns)
       throws PatternSyntaxException {
-    final List<Pattern> patterns = new ArrayList<>(exclusionPatterns.size());
-    for (final String exclusionPattern : exclusionPatterns) {
-      patterns.add(Pattern.compile(exclusionPattern));
+    final List<Pattern> result = new ArrayList<>(patterns.size());
+    for (final String pattern : patterns) {
+      result.add(Pattern.compile(pattern));
     }
-    return patterns;
+    return result;
   }
 }

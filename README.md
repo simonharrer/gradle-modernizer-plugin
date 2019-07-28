@@ -36,6 +36,8 @@ modernizer {
    javaVersion = project.targetCompatibility
 
    ignorePackages = []
+   ignoreClassNames = []
+   ignoreClassNamePatterns = []
 
    exclusions = []
    exclusionPatterns = []
