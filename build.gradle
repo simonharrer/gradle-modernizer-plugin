@@ -1,5 +1,4 @@
 plugins {
-    id 'com.gradle.build-scan' version '1.13.1'
     id "java-gradle-plugin"
     id "com.gradle.plugin-publish" version "0.9.10"
     id "net.ltgt.errorprone" version "0.0.13"
@@ -13,15 +12,6 @@ version '1.6.0-2'
 
 googleJavaFormat {
     toolVersion = '1.7'
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.6'
-}
-
-buildScan {
-    licenseAgreementUrl = 'https://gradle.com/terms-of-service'
-    licenseAgree = 'yes'
 }
 
 pluginBundle {
