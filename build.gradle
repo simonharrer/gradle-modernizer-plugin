@@ -1,3 +1,5 @@
+import static org.gradle.api.JavaVersion.*
+
 plugins {
     id "java-gradle-plugin"
     id "com.gradle.plugin-publish" version "0.9.10"
