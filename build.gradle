@@ -3,7 +3,7 @@ import static org.gradle.api.JavaVersion.*
 plugins {
     id "java-gradle-plugin"
     id "com.gradle.plugin-publish" version "0.9.10"
-    id 'com.github.sherter.google-java-format' version '0.6'
+    id 'com.github.sherter.google-java-format' version '0.8'
 }
 
 apply plugin: "java"

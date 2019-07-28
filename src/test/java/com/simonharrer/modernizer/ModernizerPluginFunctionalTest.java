@@ -1,7 +1,6 @@
 package com.simonharrer.modernizer;
 
 import java.nio.file.Paths;
-import org.gradle.testkit.runner.BuildResult;
 import org.gradle.testkit.runner.GradleRunner;
 import org.junit.Test;
 
@@ -36,10 +35,10 @@ public class ModernizerPluginFunctionalTest {
 
   @Test
   public void testOneIssue() {
-        GradleRunner.create()
-            .withProjectDir(Paths.get("examples/oneIssue").toFile())
-            .withPluginClasspath()
-            .withArguments("modernizer")
-            .buildAndFail();
+    GradleRunner.create()
+        .withProjectDir(Paths.get("examples/oneIssue").toFile())
+        .withPluginClasspath()
+        .withArguments("modernizer")
+        .buildAndFail();
   }
 }
