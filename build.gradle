@@ -9,7 +9,7 @@ plugins {
 apply plugin: "java"
 
 group 'com.simonharrer'
-version '1.8.0-1'
+version '2.1.0-1'
 
 googleJavaFormat {
     toolVersion = '1.7'
