@@ -48,7 +48,12 @@ Feel free to overwrite it if necessary.
 
 ## Release
 
+Run 
 
+```
+# Update version number
+./gradlew publishPlugins
+```
 
 ## License
 

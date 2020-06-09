@@ -39,8 +39,8 @@ gradlePlugin {
 }
 
 compileJava {
-    targetCompatibility = JavaVersion.VERSION_1_8
-    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = VERSION_1_8
+    sourceCompatibility = VERSION_1_8
 }
 
 repositories {
@@ -48,7 +48,7 @@ repositories {
 }
 
 dependencies {
-    compile 'org.gaul:modernizer-maven-plugin:2.1.0'
+    implementation 'org.gaul:modernizer-maven-plugin:2.1.0'
 
-    testCompile 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
 }
